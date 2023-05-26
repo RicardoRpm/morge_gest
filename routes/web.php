@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/cadaveres/cadastrar', function () {
+    return view('Cadaveres.create');
+})->name('cadaveres.cadastrar');
+
+Route::get('/cadaveres/listar', function () {
+    return view('Cadaveres.index');
+})->name('cadaveres.listar');
