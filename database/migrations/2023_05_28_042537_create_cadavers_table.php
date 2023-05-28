@@ -12,7 +12,23 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cadavers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nome');
+            $table->integer('idade');
+            $table->string('genero');
+            $table->string('estado_civil');
+            $table->dateTime('data_hora_obito');
+            $table->string('causa_morte');
+            $table->dateTime('data_hora_entrada_morgue');
+            $table->string('local_obito');
+            $table->string('contacto_familiar_1');
+            $table->string('contacto_familiar_2');
+            $table->string('contacto_familiar_3');
+            $table->string('info_medicas_relevantes');
+            $table->string('detalhes_procedimento');
+            $table->string('medico_autopsia');
+            $table->unsignedInteger('id_gaveta');
+            $table->foreign('id_gaveta')->references('id')->on('gavetas');
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cameras', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('localizacao_camera');
             $table->string('descricao_area_camera');
             $table->date('data_instalacao');

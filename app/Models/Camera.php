@@ -11,7 +11,7 @@ class Camera extends Model
 
     protected $fillable = [
         'localizacao_camera',
-        'desc_area_camera',
+        'descricao_area_camera',
         'data_instalacao',
         'data_ultima_manutencao',
         'estado_camera'

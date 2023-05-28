@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('gavetas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('local_gaveta');
+            $table->date('data_ultima_manutencao');
+            $table->string('disponibilidade_gaveta');
+            $table->string('info_adicional');
+            $table->unsignedInteger('camera_id');
+            $table->foreign('camera_id')->references('id')->on('cameras');
             $table->timestamps();
         });
     }

@@ -34,23 +34,38 @@
 
                         <form>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="idade_falecido">Localização da gaveta</label>
-                                    <input type="text" class="form-control" id="idade_falecido" placeholder="Localização da gaveta (ex.: sala de autópsia, área de armazenamento refrigerada)">
-                                </div>  
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="local_gaveta">Localização da gaveta</label>
+                                            <input type="text" class="form-control" id="local_gaveta" name="local_gaveta" placeholder="Localização da gaveta (ex.: sala de autópsia, área de armazenamento refrigerada)">
+                                        </div>  
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="id_gaveta">Camera</label>
+                                            <select class="custom-select rounded-0" id="id_gaveta">
+                                                <option>Livre</option>
+                                                <option>Ocupada</option>
+                                            </select>
+                                        </div>  
+                                    </div>
+
+                                </div>
 
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="data_obito">Data de última manutenção</label>
-                                            <input type="date" class="form-control" id="data_hora_obito" placeholder="Data de última manutenção">
+                                            <label for="data_ultima_manutencao">Data de última manutenção</label>
+                                            <input type="date" class="form-control" id="data_ultima_manutencao" placeholder="Data de última manutenção">
                                         </div>  
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="idade_falecido">Disponibilidade da gaveta</label>
-                                            <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                            <label for="disponibilidade_gaveta">Disponibilidade da gaveta</label>
+                                            <select class="custom-select rounded-0" id="disponibilidade_gaveta" name="disponibilidade_gaveta">
                                                 <option>Livre</option>
                                                 <option>Ocupada</option>
                                             </select>
@@ -59,8 +74,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="idade_falecido">Informações adicionais sobre a gaveta</label>
-                                    <input type="text" class="form-control" id="idade_falecido" placeholder="Informações adicionais sobre a gaveta (ex.: temperatura de armazenamento, estado de conservação)">
+                                    <label for="info_adicional">Informações adicionais sobre a gaveta</label>
+                                    <input type="text" class="form-control" id="info_adicional" name="info_adicional" placeholder="Informações adicionais sobre a gaveta (ex.: temperatura de armazenamento, estado de conservação)">
                                 </div>  
                             </div>
                             <div class="card-footer">
