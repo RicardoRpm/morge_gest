@@ -32,7 +32,12 @@
                             <h3 class="card-title">Cadastrar Gavetas</h3>
                         </div>
 
-                        <form>
+                        @if (isset($))
+                            
+                        @endif
+
+                        <form action="{{ route('gavetas.gravar') }}" method="post">
+                            @csrf
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-8">
@@ -78,6 +83,7 @@
                                     <input type="text" class="form-control" id="info_adicional" name="info_adicional" placeholder="Informações adicionais sobre a gaveta (ex.: temperatura de armazenamento, estado de conservação)">
                                 </div>  
                             </div>
+
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Cadastrar Camera</button>
                             </div>

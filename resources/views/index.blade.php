@@ -36,7 +36,7 @@
                 <div class="info-box-content">
                     <span class="info-box-text">Usuários</span>
                     <span class="info-box-number">
-                    10
+                        {{ $usuarios }}
                     </span>
                 </div>
                 <!-- /.info-box-content -->
@@ -53,7 +53,9 @@
 
                 <div class="info-box-content">
                     <span class="info-box-text">Cameras</span>
-                    <span class="info-box-number">760</span>
+                    <span class="info-box-number">
+                        {{ $cameras }}
+                    </span>
                 </div>
                 <!-- /.info-box-content -->
                 </div>
@@ -67,7 +69,9 @@
 
                 <div class="info-box-content">
                     <span class="info-box-text">Cadaveres</span>
-                    <span class="info-box-number">2,000</span>
+                    <span class="info-box-number">
+                        {{ $cadaveres }}
+                    </span>
                 </div>
                 <!-- /.info-box-content -->
                 </div>

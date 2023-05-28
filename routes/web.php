@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CameraController;
+use App\Http\Controllers\GavetaController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/login', function () {
     return view('login');
@@ -33,13 +34,16 @@ Route::get('/cameras/cadastrar', function () {
     return view('cameras.create');
 })->name('cameras.cadastrar');
 
-Route::get('/cameras/listar', function () {
-    return view('cameras.index');
-})->name('cameras.listar');
+
 
 Route::get('/gavetas/cadastrar', function () {
     return view('gavetas.create');
 })->name('gavetas.cadastrar');
+
+Route::Post('/gavetas/gravar', [GavetaController::class, 'gravar'])->name('gavetas.gravar');
+
+Route::Post('/cameras/gravar', [CameraController::class, 'gravar'])->name('cameras.gravar');
+Route::Get('/cameras/listar', [CameraController::class, 'listar'])->name('cameras.listar');
 
 Route::get('/gavetas/listar', function () {
     return view('gavetas.index');

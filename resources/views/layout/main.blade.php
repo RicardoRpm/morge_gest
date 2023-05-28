@@ -17,11 +17,12 @@
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
 
-    <!-- Preloader -->
+    <!-- Preloader 
     <div class="preloader flex-column justify-content-center align-items-center">
       <h1>MorgeGest</h1>
     </div>
-
+    -->
+    
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">
       <!-- Left navbar links -->
@@ -117,31 +118,6 @@
 
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-box-open"></i>
-                <p>
-                  Cameras
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('cameras.cadastrar') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Nova</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('cameras.listar') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Listar</p>
-                  </a>
-                </li>
-                
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-box"></i>
                 <p>
                   Gavetas
@@ -157,6 +133,30 @@
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('gavetas.listar') }}"  class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Listar</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-box-open"></i>
+                <p>
+                  Cameras
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('cameras.cadastrar') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Nova</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('cameras.listar') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Listar</p>
                   </a>
@@ -219,8 +219,12 @@
   <script src="{{ URL::asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <!-- overlayScrollbars -->
   <script src="{{ URL::asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
-  <!-- AdminLTE App -->
+  
+  <!-- AdminLTE App 
+  -->
+  
   <script src="{{ URL::asset('dist/js/adminlte.js') }}"></script>
+
   <!-- PAGE PLUGINS -->
   <!-- jQuery Mapael -->
   <script src="{{ URL::asset('plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>

@@ -32,7 +32,8 @@
                             <h3 class="card-title">Cadastrar Cameras</h3>
                         </div>
 
-                        <form>
+                        <form action="{{ route('cameras.gravar') }}" method="post">
+                            @csrf
                             <div class="card-body">
 
                             <div class="row"> 
@@ -46,7 +47,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="desc_area_camera">Descrição da área que a câmera cobre</label>
-                                        <input type="text" class="form-control" id="desc_area_camera" name="desc_area_camera" placeholder="Descrição da área que a câmera cobre">
+                                        <input type="text" class="form-control" id="descricao_area_camera" name="descricao_area_camera" placeholder="Descrição da área que a câmera cobre">
                                     </div>  
                                 </div>
                                 
@@ -57,7 +58,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="data_instalacao">Data de instalação da câmera</label>
-                                        <input type="date" class="form-control" id="data_instalacao" name="data_instalacao_camera" placeholder="Data de instalação da câmera">
+                                        <input type="date" class="form-control" id="data_instalacao" name="data_instalacao" placeholder="Data de instalação da câmera">
                                     </div>  
                                 </div>
 
