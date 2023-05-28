@@ -38,15 +38,15 @@
                             <div class="row"> 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="idade_falecido">Localização da câmera </label>
-                                        <input type="text" class="form-control" id="idade_falecido" placeholder="Localização da câmera (ex.: sala de autópsia, corredor da morgue)">
+                                        <label for="localizacao_camera">Localização da câmera </label>
+                                        <input type="text" class="form-control" id="localizacao_camera" name="localizacao_camera" placeholder="Localização da câmera (ex.: sala de autópsia, corredor da morgue)">
                                     </div>  
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="idade_falecido">Descrição da área que a câmera cobre</label>
-                                        <input type="text" class="form-control" id="idade_falecido" placeholder="Descrição da área que a câmera cobre">
+                                        <label for="desc_area_camera">Descrição da área que a câmera cobre</label>
+                                        <input type="text" class="form-control" id="desc_area_camera" name="desc_area_camera" placeholder="Descrição da área que a câmera cobre">
                                     </div>  
                                 </div>
                                 
@@ -56,29 +56,27 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="data_obito">Data de instalação da câmera</label>
-                                        <input type="date" class="form-control" id="data_hora_obito" placeholder="Data de instalação da câmera">
+                                        <label for="data_instalacao">Data de instalação da câmera</label>
+                                        <input type="date" class="form-control" id="data_instalacao" name="data_instalacao_camera" placeholder="Data de instalação da câmera">
                                     </div>  
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="data_obito">Data de última manutenção</label>
-                                        <input type="date" class="form-control" id="data_hora_obito" placeholder="Data de última manutenção">
+                                        <label for="data_ultima_manutencao">Data de última manutenção</label>
+                                        <input type="date" class="form-control" id="data_ultima_manutencao" name="data_ultima_manutencao" placeholder="Data de última manutenção">
                                     </div>  
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="idade_falecido">Estado atual da câmera</label>
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <label for="estado_camera">Estado atual da câmera</label>
+                                        <select class="custom-select rounded-0" id="estado_camera" name="estado_camera">
                                             <option>Funcionando </option>
                                             <option>Fora de serviço</option>
                                           </select>
                                     </div>  
                                 </div>
-
-                                
                             </div>
                             
 

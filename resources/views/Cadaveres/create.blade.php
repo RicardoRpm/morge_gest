@@ -35,22 +35,22 @@
                         <form>
                             <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Nome do falecido</label>
+                                <label for="nome">Nome do falecido</label>
                                 <input type="text" class="form-control" id="nome" placeholder="Digite o nome do falecido">
                             </div>  
 
                             <div class="row"> 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="idade_falecido">Idade do falecido</label>
-                                        <input type="number" class="form-control" id="idade_falecido">
+                                        <label for="idade">Idade do falecido</label>
+                                        <input type="number" class="form-control" id="idade">
                                     </div>  
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="idade_falecido">Gênero</label>
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <label for="genero">Gênero</label>
+                                        <select class="custom-select rounded-0" id="genero" name="genero">
                                             <option>Masculino</option>
                                             <option>Femenino</option>
                                           </select>
@@ -59,8 +59,8 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="idade_falecido">Estado Civil</label>
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <label for="estado_civil">Estado Civil</label>
+                                        <select class="custom-select rounded-0" id="estado_civil" name="estado_civil">
                                             <option>Casado</option>
                                             <option>Solteiro</option>
                                           </select>
@@ -69,8 +69,8 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="data_obito">Data e hora do óbito</label>
-                                        <input type="datetime-local" class="form-control" id="data_hora_obito">
+                                        <label for="data_hora_obito">Data e hora do óbito</label>
+                                        <input type="datetime-local" class="form-control" id="data_hora_obito" name="data_hora_obito">
                                     </div>  
                                 </div>
                                 
@@ -79,22 +79,22 @@
                             <div class="row">
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Causa da morte</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="O que ocasionou a morte">
+                                        <label for="causa_morte">Causa da morte</label>
+                                        <input type="text" class="form-control" id="causa_morte" name="causa_morte" placeholder="O que ocasionou a morte">
                                     </div>
                                 </div>
 
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Data e hora de entrada na morgue</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Data e hora de entrada na morgue">
+                                        <label for="data_hora_entrada_morgue">Data e hora de entrada na morgue</label>
+                                        <input type="text" class="form-control" id="data_hora_entrada_morgue" name="data_hora_entrada_morgue" placeholder="Data e hora de entrada na morgue">
                                     </div>
                                 </div>
 
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Informações sobre o local do óbito</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Informações sobre o local do óbito">
+                                        <label for="local_obito">Informações sobre o local do óbito</label>
+                                        <input type="text" class="form-control" id="local_obito" name="local_obito" placeholder="Informações sobre o local do óbito">
                                     </div>
                                 </div>
                             </div>
@@ -102,22 +102,22 @@
                             <div class="row">
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Contacto de familiar 1</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="O que ocasionou a morte">
+                                        <label for="contacto_familiar_1">Contacto de familiar 1</label>
+                                        <input type="text" class="form-control" id="contacto_familiar_1" name="contacto_familiar_1" placeholder="O que ocasionou a morte">
                                     </div>
                                 </div>
 
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Contacto de familiar 2</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Data e hora de entrada na morgue">
+                                        <label for="contacto_familiar_2">Contacto de familiar 2</label>
+                                        <input type="text" class="form-control" id="contacto_familiar_2" name="contacto_familiar_2" placeholder="Data e hora de entrada na morgue">
                                     </div>
                                 </div>
 
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Contacto de familiar 3</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Informações sobre o local do óbito">
+                                        <label for="contacto_familiar_3">Contacto de familiar 3</label>
+                                        <input type="text" class="form-control" id="contacto_familiar_3" name="contacto_familiar_3" placeholder="Informações sobre o local do óbito">
                                     </div>
                                 </div>
                             </div>
@@ -125,8 +125,8 @@
                             <div class="row">
                                 <div class="col-md-4"> 
                                     <div class="form-group">
-                                        <label for="name">Localização actual do cadaver</label>
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <label for="id_gaveta">Localização actual do cadaver</label>
+                                        <select class="custom-select rounded-0" id="id_gaveta" name="id_gaveta">
                                             <option>Gaveta 1</option>
                                             <option>Gaveta 2</option>
                                           </select>
@@ -135,8 +135,8 @@
 
                                 <div class="col-md-8"> 
                                     <div class="form-group">
-                                        <label for="name">Informações médicas relevantes (ex.: alergias, doenças pré-existentes)</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Informações médicas relevantes">
+                                        <label for="info_medicas_relevantes">Informações médicas relevantes (ex.: alergias, doenças pré-existentes)</label>
+                                        <input type="text" class="form-control" id="info_medicas_relevantes" name="info_medicas_relevantes" placeholder="Informações médicas relevantes">
                                     </div>
                                 </div>
                             </div>
@@ -144,15 +144,15 @@
                             <div class="row">
                                 <div class="col-md-12"> 
                                     <div class="form-group">
-                                        <label for="name">Detalhes do procedimento de autópsia (se aplicável)</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Detalhes do procedimento de autópsia">
+                                        <label for="detalhes_procedimento">Detalhes do procedimento de autópsia (se aplicável)</label>
+                                        <input type="text" class="form-control" id="detalhes_procedimento" name="detalhes_procedimento" placeholder="Detalhes do procedimento de autópsia">
                                     </div>
                                 </div>
 
                                 <div class="col-md-12"> 
                                     <div class="form-group">
-                                        <label for="name">Nome do médico responsável pela autópsia (se aplicável)</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Nome do médico responsável pela autópsia">
+                                        <label for="medico_autopsia">Nome do médico responsável pela autópsia (se aplicável)</label>
+                                        <input type="text" class="form-control" id="medico_autopsia" name="medico_autopsia" placeholder="Nome do médico responsável pela autópsia">
                                     </div>
                                 </div>
                             </div>
