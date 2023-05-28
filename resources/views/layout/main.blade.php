@@ -60,7 +60,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
         <span class="brand-text font-weight-light">MorgeGest</span>
       </a>
@@ -117,7 +117,7 @@
 
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-box"></i>
+                <i class="nav-icon fas fa-box-open"></i>
                 <p>
                   Cameras
                   <i class="right fas fa-angle-left"></i>
@@ -125,13 +125,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="{{ route('cameras.cadastrar') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Nova</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/charts/flot.html" class="nav-link">
+                  <a href="{{ route('cameras.listar') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Listar</p>
                   </a>
@@ -150,13 +150,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="{{ route('gavetas.cadastrar') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Nova</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/charts/flot.html" class="nav-link">
+                  <a href="{{ route('gavetas.listar') }}"  class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Listar</p>
                   </a>

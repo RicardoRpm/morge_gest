@@ -28,3 +28,19 @@ Route::get('/cadaveres/cadastrar', function () {
 Route::get('/cadaveres/listar', function () {
     return view('Cadaveres.index');
 })->name('cadaveres.listar');
+
+Route::get('/cameras/cadastrar', function () {
+    return view('cameras.create');
+})->name('cameras.cadastrar');
+
+Route::get('/cameras/listar', function () {
+    return view('cameras.index');
+})->name('cameras.listar');
+
+Route::get('/gavetas/cadastrar', function () {
+    return view('gavetas.create');
+})->name('gavetas.cadastrar');
+
+Route::get('/gavetas/listar', function () {
+    return view('gavetas.index');
+})->name('gavetas.listar');

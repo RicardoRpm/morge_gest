@@ -159,7 +159,7 @@
 
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Cadastrar Cadaveres</button>
+                                <button type="submit" class="btn btn-primary">Cadastrar Cadaver</button>
                             </div>
                         </form>
                     </div>
