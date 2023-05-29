@@ -31,10 +31,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Cadastrar Gavetas</h3>
                         </div>
-
-                        @if (isset($))
-                            
-                        @endif
+ 
 
                         <form action="{{ route('gavetas.gravar') }}" method="post">
                             @csrf

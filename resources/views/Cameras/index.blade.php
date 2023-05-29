@@ -45,26 +45,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-                                        <td></td>
-                                    </tr>
+                                    @foreach ($cameras as $camera)
+                                        <tr>
+                                            <td>{{ $camera->localizacao_camera }}</td>
+                                            <td>{{ $camera->descricao_area_camera }}</td>
+                                            <td>{{ $camera->data_instalacao }}</td>
+                                            <td>{{ $camera->data_ultima_manutencao }}</td>
+                                            <td>{{ $camera->estado_camera }}</td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                        </tr>                                        
+                                    @endforeach
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
-                                    </tr>
-                                </tfoot>
                               </table>
                         </div>
 
