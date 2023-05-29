@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CadaverController;
 use App\Http\Controllers\CameraController;
 use App\Http\Controllers\GavetaController;
 use App\Http\Controllers\HomeController;
@@ -22,13 +23,9 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::get('/cadaveres/cadastrar', function () {
-    return view('Cadaveres.create');
-})->name('cadaveres.cadastrar');
-
-Route::get('/cadaveres/listar', function () {
-    return view('Cadaveres.index');
-})->name('cadaveres.listar');
+Route::get('/cadaveres/cadastrar', [CadaverController::class, 'cadastrar'])->name('cadaveres.cadastrar');
+Route::Post('/cadaveres/gravar', [CadaverController::class, 'gravar'])->name('cadaveres.gravar');
+Route::get('/cadaveres/listar', [CadaverController::class, 'listar'])->name('cadaveres.listar');
 
 Route::get('/gavetas/cadastrar', [GavetaController::class, 'cadastrar'])->name('gavetas.cadastrar');
 Route::Post('/gavetas/gravar', [GavetaController::class, 'gravar'])->name('gavetas.gravar');

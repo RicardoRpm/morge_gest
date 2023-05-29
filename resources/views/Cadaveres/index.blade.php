@@ -36,33 +36,35 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
+                                        <th>Nome</th>
+                                        <th>Idade</th>
+                                        <th>Causa da Morte</th>
+                                        <th>Data e hora do Obito</th>
+                                        <th>Entrada na Morgue</th>
+                                        <th>Localização</th>
+                                        <th>Operações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    <td>Trident</td>
-                                    <td>Internet
-                                        Explorer 4.0
-                                    </td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    </tr>
+                                    @foreach ($cadaveres as $cadaver)
+                                        <tr>
+                                            <td>{{ $cadaver->nome }}</td>
+                                            <td>{{ $cadaver->idade }}</td>
+                                            <td>{{ $cadaver->causa_morte }}</td>
+                                            <td>{{ $cadaver->data_hora_obito }}</td>
+                                            <td>{{ $cadaver->data_hora_entrada_morgue }}</td>
+                                            <td>Gaveta - {{ $cadaver->id_gaveta }}</td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                        </tr>                                        
+                                    @endforeach
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
-                                    </tr>
-                                </tfoot>
                               </table>
                         </div>
 

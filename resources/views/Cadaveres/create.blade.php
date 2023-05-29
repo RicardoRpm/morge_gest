@@ -32,18 +32,18 @@
                             <h3 class="card-title">Cadastrar Cadaveres</h3>
                         </div>
 
-                        <form>
+                        <form action="{{ route('cadaveres.gravar') }}" method="Post">
+                            @csrf
                             <div class="card-body">
                             <div class="form-group">
                                 <label for="nome">Nome do falecido</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do falecido">
-                            </div>  
-
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do falecido">
+                            </div> 
                             <div class="row"> 
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="idade">Idade do falecido</label>
-                                        <input type="number" class="form-control" id="idade">
+                                        <input type="number" class="form-control" id="idade" name="idade">
                                     </div>  
                                 </div>
 
@@ -87,7 +87,7 @@
                                 <div class="col-md-4"> 
                                     <div class="form-group">
                                         <label for="data_hora_entrada_morgue">Data e hora de entrada na morgue</label>
-                                        <input type="text" class="form-control" id="data_hora_entrada_morgue" name="data_hora_entrada_morgue" placeholder="Data e hora de entrada na morgue">
+                                        <input type="datetime-local" class="form-control" id="data_hora_entrada_morgue" name="data_hora_entrada_morgue" placeholder="Data e hora de entrada na morgue">
                                     </div>
                                 </div>
 
@@ -127,9 +127,10 @@
                                     <div class="form-group">
                                         <label for="id_gaveta">Localização actual do cadaver</label>
                                         <select class="custom-select rounded-0" id="id_gaveta" name="id_gaveta">
-                                            <option>Gaveta 1</option>
-                                            <option>Gaveta 2</option>
-                                          </select>
+                                            @foreach ($gavetas as $gaveta)
+                                                <option value="{{ $gaveta->id }}">Gaveta - {{ $gaveta->id }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 
