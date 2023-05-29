@@ -46,10 +46,14 @@
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="id_gaveta">Camera</label>
-                                            <select class="custom-select rounded-0" id="id_gaveta">
-                                                <option>Livre</option>
-                                                <option>Ocupada</option>
+                                            <label for="camera_id">Camera</label>
+
+                                            <select class="custom-select rounded-0" id="camera_id" name="camera_id">
+                                                
+                                                @foreach ($cameras as $camera)
+                                                    <option value="{{ $camera->id }}">{{ $camera->localizacao_camera }}</option>
+                                                @endforeach
+                                
                                             </select>
                                         </div>  
                                     </div>
@@ -60,7 +64,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="data_ultima_manutencao">Data de última manutenção</label>
-                                            <input type="date" class="form-control" id="data_ultima_manutencao" placeholder="Data de última manutenção">
+                                            <input type="date" class="form-control" id="data_ultima_manutencao" name="data_ultima_manutencao" placeholder="Data de última manutenção">
                                         </div>  
                                     </div>
 

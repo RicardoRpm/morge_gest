@@ -30,21 +30,12 @@ Route::get('/cadaveres/listar', function () {
     return view('Cadaveres.index');
 })->name('cadaveres.listar');
 
+Route::get('/gavetas/cadastrar', [GavetaController::class, 'cadastrar'])->name('gavetas.cadastrar');
+Route::Post('/gavetas/gravar', [GavetaController::class, 'gravar'])->name('gavetas.gravar');
+Route::get('/gavetas/listar', [GavetaController::class, 'listar'])->name('gavetas.listar');
+
 Route::get('/cameras/cadastrar', function () {
     return view('cameras.create');
 })->name('cameras.cadastrar');
-
-
-
-Route::get('/gavetas/cadastrar', function () {
-    return view('gavetas.create');
-})->name('gavetas.cadastrar');
-
-Route::Post('/gavetas/gravar', [GavetaController::class, 'gravar'])->name('gavetas.gravar');
-
 Route::Post('/cameras/gravar', [CameraController::class, 'gravar'])->name('cameras.gravar');
 Route::Get('/cameras/listar', [CameraController::class, 'listar'])->name('cameras.listar');
-
-Route::get('/gavetas/listar', function () {
-    return view('gavetas.index');
-})->name('gavetas.listar');

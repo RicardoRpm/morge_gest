@@ -12,6 +12,8 @@ class Gaveta extends Model
     protected $fillable = [
         'data_ultima_manutencao',
         'local_gaveta',
-        ''
+        'disponibilidade_gaveta',
+        'info_adicional',
+        'camera_id'
     ];
 }
