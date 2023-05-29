@@ -86,7 +86,7 @@
                             </div>
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Cadastrar Camera</button>
+                                <button type="submit" class="btn btn-primary">Cadastrar Gaveta</button>
                             </div>
                         </form>
                     </div>

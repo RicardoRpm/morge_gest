@@ -45,6 +45,7 @@
                                         <th>Operações</th>
                                     </tr>
                                 </thead>
+                                
                                 <tbody>
                                     @foreach ($cadaveres as $cadaver)
                                         <tr>

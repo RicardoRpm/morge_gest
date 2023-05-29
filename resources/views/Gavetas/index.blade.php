@@ -36,6 +36,7 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
+                                        <th>Nº</th>
                                         <th>Localização Gaveta</th>
                                         <th>Camera</th>
                                         <th>Ultima manutenção</th>
@@ -47,6 +48,7 @@
                                 <tbody>
                                     @foreach ($gavetas as $gaveta)
                                         <tr>
+                                            <td>{{ $gaveta->id }}</td>
                                             <td>{{ $gaveta->local_gaveta }}</td>
                                             <td>{{ $gaveta->camera_id }}</td>
                                             <td>{{ $gaveta->data_ultima_manutencao }}</td>
