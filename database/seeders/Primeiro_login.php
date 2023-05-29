@@ -15,7 +15,7 @@ class Primeiro_login extends Seeder
     {
         User::create([
             'name' => 'Olivio Nation',
-            'email' => 'olivio.natio2n@gmail.com',
+            'email' => 'olivioadao12@gmail.com',
             'password' => bcrypt('1234'),
         ]);
     }
