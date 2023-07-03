@@ -39,7 +39,6 @@
                                         <th>Nº</th>
                                         <th>Localização Gaveta</th>
                                         <th>Camera</th>
-                                        <th>Ultima manutenção</th>
                                         <th>Disponibilidade</th>
                                         <th>Info. Adicionais</th>
                                         <th>Operações</th>
@@ -51,8 +50,17 @@
                                             <td>{{ $gaveta->id }}</td>
                                             <td>{{ $gaveta->local_gaveta }}</td>
                                             <td>{{ $gaveta->camera_id }}</td>
-                                            <td>{{ $gaveta->data_ultima_manutencao }}</td>
-                                            <td>{{ $gaveta->disponibilidade_gaveta }}</td>
+
+                                            @if($gaveta->disponibilidade_gaveta == "Livre")
+                                                <td class="text-center">
+                                                    <span  class="badge bg-success"> {{ $gaveta->disponibilidade_gaveta  }} </span>
+                                                </td>
+                                            @else
+                                                <td class="text-center">
+                                                    <span  class="badge bg-danger"> {{ $gaveta->disponibilidade_gaveta  }} </span>
+                                                </td>
+                                            @endif
+                                            
                                             <td>{{ $gaveta->info_adicional }}</td>
                                             <td>
                                                 <a href="#" class="btn btn-primary">
