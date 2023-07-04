@@ -26,7 +26,9 @@ Route::get('/login', function () {
 
 Route::get('/cadaveres/cadastrar', [CadaverController::class, 'cadastrar'])->name('cadaveres.cadastrar')->middleware('auth');
 Route::Post('/cadaveres/gravar', [CadaverController::class, 'gravar'])->name('cadaveres.gravar');
-Route::get('/cadaveres/listar', [CadaverController::class, 'listar'])->name('cadaveres.listar')->middleware('auth');
+Route::get('/cadaveres/historico', [CadaverController::class, 'historico'])->name('cadaveres.historico')->middleware('auth');
+Route::get('/cadaveres/levantar', [CadaverController::class, 'levantar'])->name('cadaveres.levantar')->middleware('auth');
+Route::get('/cadaveres/levantar/{id}', [CadaverController::class, 'levantarById'])->name('cadaveres.levantarId')->middleware('auth');
 
 Route::get('/gavetas/cadastrar', [GavetaController::class, 'cadastrar'])->name('gavetas.cadastrar')->middleware('auth');
 Route::Post('/gavetas/gravar', [GavetaController::class, 'gravar'])->name('gavetas.gravar');

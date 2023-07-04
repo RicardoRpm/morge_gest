@@ -106,13 +106,13 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('cadaveres.listar') }}" class="nav-link">
+                  <a href="{{ route('cadaveres.historico') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Listar</p>
+                    <p>Histórico</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('cadaveres.listar') }}" class="nav-link">
+                  <a href="{{ route('cadaveres.levantar') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Levantar</p>
                   </a>
@@ -234,6 +234,12 @@
   <!-- jQuery Mapael -->
   <script src="{{ URL::asset('plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
   <script src="{{ URL::asset('plugins/raphael/raphael.min.js') }}"></script>
+  <!-- Charts.js-->
+  <script src="{{ URL::asset('plugins/chart.js/Chart_.js') }}"></script>
+
+  @yield('scripts')
+
+  
   <script src="{{ URL::asset('plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
   <script src="{{ URL::asset('plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
 

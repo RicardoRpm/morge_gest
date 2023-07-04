@@ -26,66 +26,97 @@
 
         <!-- Main content -->
         <section class="content">
-        <div class="container-fluid">
-            <!-- Info boxes -->
-            <div class="row">
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="info-box">
-                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+            <div class="container-fluid">
+                <!-- Info boxes -->
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="info-box">
+                        <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
-                <div class="info-box-content">
-                    <span class="info-box-text">Usuários</span>
-                    <span class="info-box-number">
-                        {{ $usuarios }}
-                    </span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Usuários</span>
+                            <span class="info-box-number">
+                                {{ $usuarios }}
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+                    <!-- fix for small devices only -->
+                    <div class="clearfix hidden-md-up"></div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="info-box mb-3">
+                        <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Cameras</span>
+                            <span class="info-box-number">
+                                {{ $cameras }}
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="info-box mb-3">
+                        <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Cadaveres</span>
+                            <span class="info-box-number">
+                                {{ $cadaveres }}
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+
+                    
                 </div>
-                <!-- /.info-box-content -->
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6" style="max-width: 500px;">
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                    <div class="col-md-6">
+
+                    </div>
                 </div>
-                <!-- /.info-box -->
-            </div>
-
-            <!-- fix for small devices only -->
-            <div class="clearfix hidden-md-up"></div>
-
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="info-box mb-3">
-                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-shopping-cart"></i></span>
-
-                <div class="info-box-content">
-                    <span class="info-box-text">Cameras</span>
-                    <span class="info-box-number">
-                        {{ $cameras }}
-                    </span>
-                </div>
-                <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-
-            <!-- /.col -->
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="info-box mb-3">
-                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
-
-                <div class="info-box-content">
-                    <span class="info-box-text">Cadaveres</span>
-                    <span class="info-box-number">
-                        {{ $cadaveres }}
-                    </span>
-                </div>
-                <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            </div>
-            <!-- /.row -->
-
-        </div><!--/. container-fluid -->
+            </div><!--/. container-fluid -->
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+@endsection
+
+@section('scripts')
+    <script>
+        const ctx = document.getElementById('myChart');
+    
+        new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Camera 1', 'Camera 2', 'Camera 3'],
+            datasets: [{
+                label: 'Total de Cadaveres',
+                data: [300, 50, 100],
+                borderWidth: 1
+            }]
+        },
+       
+        });
+    </script>
+
 
 @endsection
 

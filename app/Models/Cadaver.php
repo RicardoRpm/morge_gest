@@ -25,5 +25,6 @@ class Cadaver extends Model
         'info_medicas_relevantes',
         'detalhes_procedimento',
         'medico_autopsia',
+        'emGaveta',
     ];
 }

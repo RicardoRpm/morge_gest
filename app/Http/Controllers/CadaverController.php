@@ -29,10 +29,18 @@ class CadaverController extends Controller
         return redirect()->route('gavetas.listar');
     }
 
-    public function listar(Request $request, Cadaver $cadaver)
+    public function levantar(Request $request, Cadaver $cadaver)
     {
-        $cadaveres = $cadaver->all();
-        return view('Cadaveres.index', [
+        $cadaveres = $cadaver->all()->where('emGaveta', 'SIM');
+        return view('Cadaveres.levantar', [
+            'cadaveres' => $cadaveres,
+        ]);
+    }
+
+    public function historico(Request $request, Cadaver $cadaver)
+    {
+        $cadaveres = $cadaver->all()->where('emGaveta', 'NAO');
+        return view('Cadaveres.history', [
             'cadaveres' => $cadaveres,
         ]);
     }
