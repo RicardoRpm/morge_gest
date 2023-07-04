@@ -27,12 +27,12 @@
             <div class="row">
                 <div class="col-md-12">
                     
-                    @if(isset($msg) && $msg == 'SIM')
+                    @if(session('msg') == 'SIM')
                         <div class="alert alert-success" role="alert">
                             Cadaver levantado com sucesso...
                         </div>
                     @else 
-                        @if(isset($msg) && $msg == 'NÃO')
+                        @if(session('msg') == 'NÃO')
                             <div class="alert alert-danger" role="alert">
                                 Não foi possível levantar o cadaver...
                             </div>
