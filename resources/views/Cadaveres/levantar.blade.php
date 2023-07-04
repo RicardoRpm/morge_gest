@@ -27,6 +27,18 @@
             <div class="row">
                 <div class="col-md-12">
                     
+                    @if(isset($msg) && $msg == 'SIM')
+                        <div class="alert alert-success" role="alert">
+                            Cadaver levantado com sucesso...
+                        </div>
+                    @else 
+                        @if(isset($msg) && $msg == 'NÃO')
+                            <div class="alert alert-danger" role="alert">
+                                Não foi possível levantar o cadaver...
+                            </div>
+                        @endif
+                    @endif
+
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Listar Cadaveres</h3>
@@ -69,8 +81,8 @@
                                                 <a href="#" class="btn btn-danger">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-warning">
-                                                    <i class="fas fa-trash-alt"></i>
+                                                <a href="{{ route('cadaveres.levantarById', $cadaver->id) }}" class="btn btn-warning">
+                                                    <i class='fas fa-handshake'></i>
                                                 </a>
                                             </td>
                                         </tr>                                        

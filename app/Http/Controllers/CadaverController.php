@@ -6,6 +6,7 @@ use App\Models\Cadaver;
 use App\Models\Gaveta;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 
 class CadaverController extends Controller
 {
@@ -43,5 +44,20 @@ class CadaverController extends Controller
         return view('Cadaveres.history', [
             'cadaveres' => $cadaveres,
         ]);
+    }
+
+    public function levantarById(string|int $id)
+    {
+        $cadaver = Cadaver::find($id);
+
+        if ($cadaver != null) {
+            $cadaver->emGaveta = "NAO";
+            $cadaver->save();
+            Session::put('msg', 'SIM');
+            return redirect()->route('cadaveres.levantar');
+        } else {
+            Session::put('msg', 'NÃO');
+            return redirect()->back();
+        }
     }
 }
