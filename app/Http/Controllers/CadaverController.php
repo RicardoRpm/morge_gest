@@ -30,10 +30,11 @@ class CadaverController extends Controller
 
         $cadaver_request['data_hora_obito'] = Carbon::createFromFormat('Y-m-d\TH:i:s', $htmlDatetimeLocal);
 
+
         $cadaver->create($cadaver_request);
         $gavetaRepository = new GavetaRepository();
 
-        $gavetaRepository->AlterarEstadoGaveta($cadaver->id_gaveta, EnumStatusGavetas::Ocupada->value);
+        $gavetaRepository->AlterarEstadoGaveta($request->id_gaveta, EnumStatusGavetas::Ocupada->value);
         return redirect()->route('gavetas.listar');
     }
 

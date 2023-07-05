@@ -100,30 +100,17 @@
                             </div>
                             
                             <div class="row">
-                                <div class="col-md-4"> 
+                                <div class="col-md-3"> 
                                     <div class="form-group">
-                                        <label for="contacto_familiar_1">Contacto de familiar 1</label>
-                                        <input type="text" class="form-control" id="contacto_familiar_1" name="contacto_familiar_1" placeholder="O que ocasionou a morte">
+                                        <label for="contacto_familiar_1">Contacto de familiar</label>
+                                        <input type="text" class="form-control" id="contacto_familiar_1" name="contacto_familiar_1" placeholder="Contacto de familiar">
+                                        <input hidden type="text" id="contacto_familiar_2" name="contacto_familiar_2" value="00000">
+                                        <input hidden type="text" id="contacto_familiar_3" name="contacto_familiar_3" value="00000">
                                     </div>
                                 </div>
 
-                                <div class="col-md-4"> 
-                                    <div class="form-group">
-                                        <label for="contacto_familiar_2">Contacto de familiar 2</label>
-                                        <input type="text" class="form-control" id="contacto_familiar_2" name="contacto_familiar_2" placeholder="Data e hora de entrada na morgue">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4"> 
-                                    <div class="form-group">
-                                        <label for="contacto_familiar_3">Contacto de familiar 3</label>
-                                        <input type="text" class="form-control" id="contacto_familiar_3" name="contacto_familiar_3" placeholder="Informações sobre o local do óbito">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4"> 
+          
+                                <div class="col-md-3"> 
                                     <div class="form-group">
                                         <label for="id_gaveta">Localização actual do cadaver</label>
                                         <select class="custom-select rounded-0" id="id_gaveta" name="id_gaveta">
@@ -134,12 +121,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-8"> 
+                                <div class="col-md-6"> 
                                     <div class="form-group">
                                         <label for="info_medicas_relevantes">Informações médicas relevantes (ex.: alergias, doenças pré-existentes)</label>
                                         <input type="text" class="form-control" id="info_medicas_relevantes" name="info_medicas_relevantes" placeholder="Informações médicas relevantes">
                                     </div>
                                 </div>
+
                             </div>
 
                             <div class="row">
