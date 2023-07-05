@@ -83,7 +83,7 @@
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                    <div class="col-md-6" style="max-width: 500px;">
+                    <div class="col-md-6" style="max-width: 400px;">
                         <canvas id="myChart"></canvas>
                     </div>
 
@@ -111,7 +111,8 @@
                 label: 'Total de Cadaveres',
                 data: [300, 50, 100],
                 borderWidth: 1
-            }]
+            }],
+            
         },
         });
     </script>

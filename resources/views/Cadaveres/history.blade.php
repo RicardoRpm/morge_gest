@@ -42,7 +42,6 @@
                                         <th>Data e hora do Obito</th>
                                         <th>Entrada na Morgue</th>
                                         <th>Localização</th>
-                                        <th>Operações</th>
                                     </tr>
                                 </thead>
                                 
@@ -55,14 +54,7 @@
                                             <td>{{ $cadaver->data_hora_obito }}</td>
                                             <td>{{ $cadaver->data_hora_entrada_morgue }}</td>
                                             <td>Gaveta - {{ $cadaver->id_gaveta }}</td>
-                                            <td>
-                                                <a href="#" class="btn btn-primary">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-                                                <a href="#" class="btn btn-danger">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </a>
-                                            </td>
+                                            
                                         </tr>                                        
                                     @endforeach
                                 </tbody>

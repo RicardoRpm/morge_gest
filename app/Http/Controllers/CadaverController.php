@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Repository\GavetaRepository;
 use App\Models\Cadaver;
 use App\Models\Gaveta;
 use Illuminate\Http\Request;
@@ -27,6 +28,9 @@ class CadaverController extends Controller
         $cadaver_request['data_hora_obito'] = Carbon::createFromFormat('Y-m-d\TH:i:s', $htmlDatetimeLocal);
 
         $cadaver->create($cadaver_request);
+        $gavetaRepository = new GavetaRepository();
+
+        $gavetaRepository->AlterarEstadoGaveta($cadaver->id_gaveta, EnumStatusGavetas::Ocupada->value);
         return redirect()->route('gavetas.listar');
     }
 
@@ -53,6 +57,9 @@ class CadaverController extends Controller
         if ($cadaver != null) {
             $cadaver->emGaveta = "NAO";
             $cadaver->save();
+            $gavetaRepository = new GavetaRepository();
+            $gavetaRepository->AlterarEstadoGaveta($cadaver->id_gaveta, EnumStatusGavetas::Livre->value);
+
             Session::put('msg', 'SIM');
             return redirect()->route('cadaveres.levantar');
         } else {
@@ -60,4 +67,11 @@ class CadaverController extends Controller
             return redirect()->back();
         }
     }
+}
+
+
+enum EnumStatusGavetas: string
+{
+    case Livre = "Livre";
+    case Ocupada = "Ocupada";
 }
