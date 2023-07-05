@@ -13,7 +13,9 @@ class CadaverController extends Controller
 {
     public function cadastrar(Gaveta $gaveta)
     {
-        $gavetas = $gaveta->where('disponibilidade_gaveta', '=', 'Livre');
+        $gavetas = $gaveta->all()->where('disponibilidade_gaveta', 'Livre');
+
+        //dd($gavetas);
 
         return view('Cadaveres.create', [
             'gavetas' => $gavetas

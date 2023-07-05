@@ -82,13 +82,9 @@
                     
                 </div>
                 <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-6" style="max-width: 400px;">
+                <div class="d-flex d-flex justify-content-center">
+                    <div class="col-md-12 text-center" style="max-width: 400px;">
                         <canvas id="myChart"></canvas>
-                    </div>
-
-                    <div class="col-md-6">
-
                     </div>
                 </div>
             </div><!--/. container-fluid -->
@@ -104,20 +100,26 @@
         const ctx = document.getElementById('myChart');
         
         new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: <?php echo $qtd_descricaoCamera ?>,
-            datasets: [{
-                label: 'Total de Gavetas por camera',
-                data: [{{ implode(',',  $qtd_gavetasCameras) }}],
-                backgroundColor: <?php echo $cor_corCamera ?>,
-                borderWidth: 1
-            }],
-            
-        },
+            type: 'doughnut',
+            data: {
+                labels: <?php echo $qtd_descricaoCamera ?>,                
+                datasets: [{
+                    label: 'Total de Gavetas por camera',
+                    data: [{{ implode(',',  $qtd_gavetasCameras) }}],
+                    backgroundColor: <?php echo $cor_corCamera ?>,
+                    borderWidth: 0,
+                }],  
+            },
+            options: {
+                legend: {
+                    labels: {
+                        fontColor: '#000', //set your desired color
+                    }
+                }
+            },
         });
-    </script>
 
+    </script>
 
 @endsection
 

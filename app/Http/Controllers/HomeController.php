@@ -21,7 +21,7 @@ class HomeController extends Controller
         $count = 0;
         foreach ($consultas as $consulta) {
             $qtd_gavetasCameras[$count] = $consulta->qtd_gaveta;
-            $cor_corCamera[$count] = $consulta->cor;
+            $cor_corCamera[$count] =    $consulta->cor;
             $qtd_descricaoCamera[$count] = $consulta->descricao_area_camera;
             $count++;
         }
