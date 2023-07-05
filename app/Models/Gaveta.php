@@ -14,6 +14,7 @@ class Gaveta extends Model
         'local_gaveta',
         'disponibilidade_gaveta',
         'info_adicional',
-        'camera_id'
+        'camera_id',
+        'cor'
     ];
 }

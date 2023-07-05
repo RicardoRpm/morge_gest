@@ -14,6 +14,7 @@ class Camera extends Model
         'descricao_area_camera',
         'data_instalacao',
         'data_ultima_manutencao',
-        'estado_camera'
+        'estado_camera',
+        'cor'
     ];
 }

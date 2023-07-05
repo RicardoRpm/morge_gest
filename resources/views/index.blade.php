@@ -102,14 +102,15 @@
 @section('scripts')
     <script>
         const ctx = document.getElementById('myChart');
-    
+        
         new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Camera 1', 'Camera 2', 'Camera 3'],
+            labels: <?php echo $qtd_descricaoCamera ?>,
             datasets: [{
-                label: 'Total de Cadaveres',
-                data: [300, 50, 100],
+                label: 'Total de Gavetas por camera',
+                data: [{{ implode(',',  $qtd_gavetasCameras) }}],
+                backgroundColor: <?php echo $cor_corCamera ?>,
                 borderWidth: 1
             }],
             

@@ -7,7 +7,6 @@ use App\Models\Gaveta;
 
 class GavetaRepository
 {
-
     public function AlterarEstadoGaveta(int $id, string $statusGavetasEnum)
     {
         $gaveta = Gaveta::find($id);

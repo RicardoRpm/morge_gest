@@ -37,18 +37,25 @@
                             <div class="card-body">
 
                             <div class="row"> 
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         <label for="localizacao_camera">Localização da câmera </label>
                                         <input type="text" class="form-control" id="localizacao_camera" name="localizacao_camera" placeholder="Localização da câmera (ex.: sala de autópsia, corredor da morgue)">
                                     </div>  
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         <label for="desc_area_camera">Descrição da área que a câmera cobre</label>
                                         <input type="text" class="form-control" id="descricao_area_camera" name="descricao_area_camera" placeholder="Descrição da área que a câmera cobre">
                                     </div>  
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Cor</label>
+                                        <input type="color" class="form-control" id="cor" name="cor" />
+                                    </div>
                                 </div>
                                 
                             </div>

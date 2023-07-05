@@ -79,10 +79,21 @@
                                     </div>                                    
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="info_adicional">Informações adicionais sobre a gaveta</label>
-                                    <input type="text" class="form-control" id="info_adicional" name="info_adicional" placeholder="Informações adicionais sobre a gaveta (ex.: temperatura de armazenamento, estado de conservação)">
-                                </div>  
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <label for="info_adicional">Informações adicionais sobre a gaveta</label>
+                                            <input type="text" class="form-control" id="info_adicional" name="info_adicional" placeholder="Informações adicionais sobre a gaveta (ex.: temperatura de armazenamento, estado de conservação)">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Cor</label>
+                                            <input type="color" class="form-control" id="cor" name="cor" />
+                                        </div>
+                                    </div>
+                                </div>
+                                  
                             </div>
 
                             <div class="card-footer">

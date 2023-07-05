@@ -51,7 +51,11 @@
                                             <td>{{ $camera->descricao_area_camera }}</td>
                                             <td>{{ $camera->data_instalacao }}</td>
                                             <td>{{ $camera->data_ultima_manutencao }}</td>
-                                            <td>{{ $camera->estado_camera }}</td>
+                                            <td class="text-center">
+                                                <span style="background-color:{{ $camera->cor }}; border-radius: 5px;" class=" p-1">
+                                                    {{ $camera->estado_camera }}
+                                                </span>
+                                            </td>
                                             <td>
                                                 <a href="#" class="btn btn-primary">
                                                     <i class="fas fa-edit"></i>
